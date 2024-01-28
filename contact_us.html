@@ -4,29 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
     <link rel="stylesheet" href="stylesheets/site.css" />
 </head>
 <body> 
     <header>
-        <div id="banner">
+        <div id="banner" class="bg-secondary text-white text-center" >
             <p>Notification</p>
         </div>
-        <nav>
+        <!-- <nav>
             <!-- Anchor tags used for internal navigation -->
-            <a href="index.html">Home</a>
+        <!--    <a href="index.html">Home</a>
             <a href="about_us.html">About Us</a>
             <a href="contact_us.html">Contact Us</a>
+        </nav> -->
+        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">Animal Protection</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                  <a class="nav-link" href="about_us.html">About Us</a>
+                  <a class="nav-link" href="contact_us.html">Contact Us</a>
+                </div>
+              </div>
+            </div>
         </nav>
     </header>
 
-    <main>
+    <main class="container">
 
         <h1 >Contact Us</h1>
         <hr/>
         <article>
                 <!-- HTML Table syntax. Table tag, then tr and then th for headers and td for data -->
         <h2>Locations</h2>
-        <table>
+        <table class="table table-striped-columns table-hover">
             <tr>
                 <th>Logo</th>
                 <th>Location</th>
@@ -68,23 +84,34 @@
             <h2>General Inquiries</h2>
             <!-- HTML form tag. the action attribute navigates to a page after submission. -->
             <form action="confirmation.html" id="contactSite">
-                <label for="fullname">Name: *</label><br/>
-                <input required type="text" id="fullname" name="fullname"/>
-                <br/><br/>
-                <label for="email">Email Address: *</label><br/>
-                <input required type="email" id="email" name="emailaddress" />
-                <br/><br/>
-                <label>Are you employed?</label><br/>
-                <input type="radio" value="Y" name="employed"/> Yes
-                <input type="radio" value="N" name="employed"/> No
-                <br/><br/>
-                <label for="inquiry">State your inquiry *</label><br/>
-                <textarea required cols="50" rows="10" maxlength="150" id="inquiry" name="inquiry"></textarea>
-                <br/><br/>
-                <input type="submit" />
+                <div class="mb-3">
+                    <label for="fullname" class="form-label">Name: *</label><br/>
+                    <input required type="text" class="form-control" id="fullname" name="fullname" placeholder="Eg. Joe Root"/>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address: *</label><br/>
+                    <input required type="email" class="form-control" id="email" name="emailaddress" placeholder="Eg. joeroot412@gmail.com"/>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Are you employed?</label><br/>
+                    <input id="yesEmployed" type="radio" value="Y" name="employed" class="form-check-input"/
+                    ><label class="form-check-label" for="yesEmployed">
+                        Yes
+                      </label> 
+                    <input id="noEmployed" type="radio" value="N" name="employed" class="form-check-input"/
+                    ><label class="form-check-label" for="noEmployed">
+                        No
+                    </label>    
+                </div>
+                <div class="mb-3">
+                    <label for="enquiry" class="form-label">State Your Enquiry *</label>
+                    <textarea class="form-control" required cols="50" rows="10" maxlength="150" id="inquiry" name="inquiry" placeholder="Please let us know how we can help you today!"/></textarea>
+                </div>
+                <br/>
+                <button type="submit" class="btn btn-success">Submit</button>
                 <!-- <button type="button" onclick="alert('You Clicked Clear');">Clear</button> -->
                 <!-- <button type="button" onclick="ClearForm()">Clear</button> -->
-                <button type="reset" onclick="ClearForm()">Clear</button>
+                <button type="reset" class="btn btn-warning" onclick="ClearForm()">Clear</button>
             </form>
         </article>
         
@@ -97,7 +124,8 @@
             <a href="https://www.ebay.com" target="_blank">eBay</a>
             <a href="https://www.trevoirwilliams.com" target="_blank">Trevoir Williams Website</a>
     </footer>
-
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
     <script src="scripts/site.js"></script>
 </body>
 </html>

@@ -8,21 +8,22 @@ h2{
 h1, h2, h3, h4, h5, h6{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-p{
+/* p{
     font-family: 'Courier New', Courier, monospace;
-}
+} */
 
 #banner{
-    background-color: darkkhaki;
+    /* background-color: darkkhaki; */
     padding-bottom: 5px;
     padding-top: 5px;
     text-align: center;
+    /* text-align: center; */
 }
 #banner p{
     margin: 0;
 }
 
-#nav, nav{
+/* #nav, nav{
     background-color: cadetblue;
     padding: 10px;
     text-align: center;
@@ -34,9 +35,9 @@ p{
     font-size: large;
     margin-right: 10px;
     padding: 10px;
-}
+} */
 
-#nav a:hover{
+/* #nav a:hover{
     background-color: aquamarine;
     color: cadetblue;
 }
@@ -44,9 +45,9 @@ p{
 nav a:hover{
     background-color: aquamarine;
     color: cadetblue;
-}
+} */
 
-#footer, footer{
+/* #footer, footer{
     background-color: #E7E9EB;
     min-height: 150px;
     text-align: center;
@@ -55,12 +56,12 @@ nav a:hover{
 #footer a, footer a{
     color: blue;
     text-decoration: overline;
-}
+} */
 
-#main, main{
+/* #main, main{
     width: 80%;
     margin: 0 auto;
-}
+} */
 
 article{
     margin-bottom: 50px;
